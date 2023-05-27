@@ -21,7 +21,6 @@ const AgeCalculator = () => {
         document.getElementById('days').innerHTML = '--';
 
         e.preventDefault();
-        console.log(date)
         const { isError, errors } = ValidateInput(date);
         setError(errors);
         if (!isError) {
