@@ -48,13 +48,16 @@ const AgeCalculator = () => {
                     <OutputItem text="days" />
                 </div>
             </div>
-            <div className="attribution">
-                Challenge by
-                <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-                > Frontend Mentor</a
-                >. Coded by <a target="blank" href="https://github.com/EEstaniel">Edwin Estaniel</a>.
-            </div>
+            <footer>
+                <div className="attribution">
+                    Challenge by
+                    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+                    > Frontend Mentor</a
+                    >. Coded by <a target="blank" href="https://github.com/EEstaniel">Edwin Estaniel</a>.
+                </div>
+            </footer>
         </main>
+
     );
 };
 
