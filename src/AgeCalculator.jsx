@@ -33,7 +33,7 @@ const AgeCalculator = () => {
     }
 
     return (
-        <div>
+        <main>
             <div className="container">
                 <form className="input-group">
                     <InputItem placeholder={"DD"} label={"DAY"} value={date.day} error={error.day} onChange={handleInputChange} />
@@ -54,7 +54,7 @@ const AgeCalculator = () => {
                 > Frontend Mentor</a
                 >. Coded by <a target="blank" href="https://github.com/EEstaniel">Edwin Estaniel</a>.
             </div>
-        </div>
+        </main>
     );
 };
 
