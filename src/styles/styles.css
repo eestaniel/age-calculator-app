@@ -1,0 +1,213 @@
+@import 'fonts.css';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 0.935rem;
+    line-height: 1.5;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: hsl(0deg 0% 94%);
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+.container {
+    display: grid;
+    background-color: hsl(0deg 0% 100%);
+    padding: 2rem 1.5rem;
+    margin: 1rem 1.5rem;
+    border-radius: 1.5rem 1.5rem 7rem 1.5rem;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+}
+
+.input-group {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    gap: 1rem;
+}
+
+.input__text,
+.input__item,
+.error-color {
+    color: hsl(0deg 0% 44%);
+    font-weight: 700;
+}
+
+.input__number {
+    font-weight: 700;
+    max-width: 85px;
+    padding: .835rem 0.875rem;
+    border: 1px solid hsl(300deg 0% 90%);
+    border-radius: .5rem;
+}
+
+.input__error {
+    font-style: italic;
+    position: absolute;
+    font-size: .5rem;
+}
+
+.button {
+    position: absolute;
+    max-height: 64px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    border: none;
+    background-color: hsl(259deg 100% 65%);
+    right: 41%;
+    bottom: -125%;
+    z-index: 1;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.button svg {
+    max-height: 26px;
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.error-color {
+    color: hsl(359deg 73% 64%);
+    border-color: hsl(359deg 73% 64%);
+}
+
+.output-group {
+    margin-top: 3.25rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.output__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.75rem;
+}
+
+.output__number {
+    color: hsl(259deg 98% 65%);
+}
+
+.output__text {
+    letter-spacing: -1px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+    .container{
+        max-width: 838px;
+        max-height: 650px;
+        padding: 4rem 10rem 4rem 3.5rem
+    }
+
+    .input-group {
+        place-items: center;
+        gap: 2.5rem;
+        padding-right: 10rem;
+
+    }
+
+    .input__day--text {
+        font-size: 1.25rem;
+
+    }
+
+    .input__number {
+        max-width: 158px;
+        max-height: 70px;
+        margin-top: .75rem;
+        font-size: 2.5rem;
+    }
+
+    .input__error {
+        font-size: .875rem;
+        position: absolute;
+
+    }
+
+    hr {
+        margin-top: 2.875rem;
+    }
+
+    .button {
+        max-height: 96px;
+        height: 100%;
+        display: grid;
+        place-content: center;
+        bottom: -90%;
+        right: 0;
+    }
+
+    .button svg {
+        max-height: 48px;
+    }
+
+    .output-group {
+        display: grid;
+        margin-top: 3rem;
+        margin-bottom: 10rem;
+        line-height: 1;
+    }
+
+    .output__number {
+        font-size: 7rem;
+    }
+
+    .output__text {
+        font-size: 6.5rem;
+
+    }
+}
