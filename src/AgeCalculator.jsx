@@ -29,7 +29,6 @@ const AgeCalculator = () => {
             document.getElementById('years').innerHTML = years.toString();
             document.getElementById('months').innerHTML = months.toString();
             document.getElementById('days').innerHTML = days.toString();
-            console.log(years, months, days);
         }
     }
 
