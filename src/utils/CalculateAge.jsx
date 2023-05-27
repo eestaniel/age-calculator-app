@@ -1,23 +1,51 @@
 const CalculateAge = (birthDay, birthMonth, birthYear) => {
-    const today = new Date();
-    const currentDay = today.getDate();
-    const currentMonth = today.getMonth() + 1; // adding 1 to make it 1-indexed
-    const currentYear = today.getFullYear();
+    // calculate age in years, months, and days
+    // take into account if birth month is greater than current month
+    // take into account if birthday is greater than current day
+    // take into account if month has 28 days, 30 days, or 31 days
 
+    // get current date
+    const currentDate = new Date();
+    const currentDay = currentDate.getDate();
+    const currentMonth = currentDate.getMonth() + 1;
+    const currentYear = currentDate.getFullYear();
+
+    // calculate age in years
     let ageInYears = currentYear - birthYear;
-    let ageInMonths = currentMonth - birthMonth;
-    let ageInDays = currentDay - birthDay;
-
-    // Adjust for birth month and day
-    if (ageInMonths < 0 || (ageInMonths === 0 && ageInDays < 0)) {
+    if (currentMonth < birthMonth) {
         ageInYears--;
-        ageInMonths = (ageInMonths + 12) % 12;
+    }
+    else if (currentMonth === birthMonth) {
+        if (currentDay < birthDay) {
+            ageInYears--;
+        }
     }
 
-    if (ageInDays < 0) {
+    // calculate age in months
+    let ageInMonths = currentMonth - birthMonth;
+    if (currentDay < birthDay) {
         ageInMonths--;
-        const daysInLastMonth = new Date(currentYear, currentMonth - 1, 0).getDate();
-        ageInDays += daysInLastMonth;
+    }
+    if (ageInMonths < 0) {
+        ageInMonths += 12;
+    }
+
+    // calculate age in days
+    // take into account if month has 28 days, 30 days, or 31 days
+    let ageInDays = currentDay - birthDay;
+    if (ageInDays < 0) {
+        if ([4, 6, 9, 11].includes(currentMonth)) {
+            ageInDays += 30;
+        }
+        else if (currentMonth === 2) {
+            ageInDays += 28;
+        }
+        else {
+            ageInDays += 31;
+        }
+    }
+    if (ageInMonths < 0) {
+        ageInMonths += 12;
     }
 
     return {
