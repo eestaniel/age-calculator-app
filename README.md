@@ -21,7 +21,7 @@ Users should be able to:
 ### Screenshot
 ![desktop](src/assets/screenshots/desktop-view.png )
 
-![mobile](src/assets/screenshots/mobile-view.png )
+<img src="src/assets/screenshots/mobile-view.png" width="600px" alt="mobile-img">
 
 ### Links
 
