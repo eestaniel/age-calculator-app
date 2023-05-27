@@ -19,7 +19,11 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 
 ### Screenshot
-![desktop](src/assets/screenshots/desktop-view.png | width=300)
+![desktop](src/assets/screenshots/desktop-view.png )
+
+<img src="src/assets/screenshots/desktop-view.png" width="400px" alt="desktop-img">
+
+<img src="src/assets/screenshots/mobile-view.png" width="400px" alt="mobile-img">
 
 ### Links
 
